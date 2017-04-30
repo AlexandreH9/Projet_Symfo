@@ -1,0 +1,22 @@
+eshop:
+    resource: "@EshopBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /user
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+#    type:     annotation
+    prefix:   /
+
+login:
+    path: /login
+    defaults: { _controller: UserBundle:Security:login }
+
+login_check:
+    path: /admin/login_check
+
+logout:
+    path: /admin/logout

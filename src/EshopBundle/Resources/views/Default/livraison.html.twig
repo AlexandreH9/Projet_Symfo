@@ -1,0 +1,46 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h2>Livraison</h2>
+                <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+
+                        <div class="span4 offset2">
+                            <h4>Adresse de livraison</h4>
+                            <form action="{{ path('eshop_validation') }}">
+                                <label>Nom</label>
+                                <input type="text">
+
+                                <label>Prénom</label>
+                                <input type="text">
+
+                                <label>Adresse</label>
+                                <input type="text">
+
+                                <label>Ville</label>
+                                <input type="text">
+
+                                <label>Code postal</label>
+                                <input type="text">
+
+                                <label>Ville</label>
+                                <input type="text">
+
+                                <label>Téléphone</label>
+                                <input type="text">
+
+                                <br />
+                                <button class="btn btn-primary">Valider</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}

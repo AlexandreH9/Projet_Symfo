@@ -1,0 +1,19 @@
+eshop_homepage:
+    path:     /
+    defaults: { _controller: EshopBundle:Produits:Produits }
+
+eshop_produit:
+    path:     /produit
+    defaults: { _controller: EshopBundle:Produits:ProduitPres }
+
+eshop_panier:
+    path:     /panier
+    defaults: { _controller: EshopBundle:Panier:Panier }
+
+eshop_livraison:
+    path:     /livraison
+    defaults: { _controller: EshopBundle:Panier:Livraison }
+
+eshop_validation:
+    path:     /validation
+    defaults: { _controller: EshopBundle:Panier:Validation }

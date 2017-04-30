@@ -1,0 +1,15 @@
+admin_homepage:
+    path:     /admin_home
+    defaults: { _controller: AdminBundle:Default:Index }
+
+admin_add:
+    path:     /admin_add
+    defaults: { _controller: AdminBundle:Default:Add }
+
+admin_list:
+    path:     /admin_list
+    defaults: { _controller: AdminBundle:Default:List }
+
+admin_delete:
+    path:     /admin_delete
+    defaults: { _controller: AdminBundle:Default:Delete }
