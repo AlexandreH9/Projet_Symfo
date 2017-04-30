@@ -5,9 +5,11 @@ namespace AdminBundle\Controller;
 use EshopBundle\EshopBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Form;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use EshopBundle\Entity\Produit;
+
 
 class ProductController extends Controller
 {
@@ -38,7 +40,7 @@ class ProductController extends Controller
             return $this->redirectToRoute("listArticles");
         }
 
-        return $this->render('AdminBundle:Article:add.html.twig', array(
+        return $this->render('AdminBundle:Produit:add.html.twig', array(
             'form' => $form->createView()
         ));
     }
@@ -52,7 +54,7 @@ class ProductController extends Controller
 
         $produits = $em->getRepository('EshopBundle:Produit')->findAll();
 
-        return $this->render('AdminBundle:Article:list.html.twig', array('produits' => $produits));
+        return $this->render('AdminBundle:Produit:list.html.twig', array('produits' => $produits));
     }
 
 
@@ -60,10 +62,10 @@ class ProductController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $articleRepo = $em->getRepository("AppBundle:Article");
+        $articleRepo = $em->getRepository("AppBundle:Produit");
         $articles = $articleRepo->findAll();
 
-        return $this->render('AdminBundle:Article:list.html.twig', array(
+        return $this->render('AdminBundle:Produit:list.html.twig', array(
             'articles' => $articles
         ));
     }

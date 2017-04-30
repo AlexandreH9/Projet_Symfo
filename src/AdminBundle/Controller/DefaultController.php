@@ -17,16 +17,16 @@ class DefaultController extends Controller
 
     public function AddAction()
     {
-        return $this->render('AdminBundle:Article:add.html.twig');
+        return $this->render('AdminBundle:Produit:add.html.twig');
     }
 
     public function ListAction()
     {
-        return $this->render('AdminBundle:Article:list.html.twig');
+        return $this->render('AdminBundle:Produit:list.html.twig');
     }
 
     public function DeleteAction()
     {
-        return $this->render('AdminBundle:Article:delete.html.twig');
+        return $this->render('AdminBundle:Produit:delete.html.twig');
     }
 }
